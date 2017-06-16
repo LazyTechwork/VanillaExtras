@@ -74,8 +74,13 @@ public class GuiBlockBreaker extends GuiContainer {
 		sync %= 10;
 		if (sync == 0)
 			PacketHandler.INSTANCE
-					.sendToServer(new PacketGetWorker(this.te.getPos(), this.mc.player.getAdjustedHorizontalFacing(),
-							"ivansteklow.vanillaex.client.gui.GuiBlockBreaker", "cooldown", "maxCooldown"));
+					.sendToServer(
+							new PacketGetWorker(
+									this.te.getPos(),
+									this.mc.player.getAdjustedHorizontalFacing(),
+							"ivansteklow.vanillaex.client.gui.GuiBlockBreaker",
+							"cooldown",
+							"maxCooldown"));
 
 	}
 

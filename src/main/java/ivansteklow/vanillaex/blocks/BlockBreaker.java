@@ -124,6 +124,7 @@ public class BlockBreaker extends BlockMachine {
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn,
 			EnumHand hand, EnumFacing heldItem, float side, float hitX, float hitY) {
 		if (!worldIn.isRemote) {
+			Utils.getLogger(Refs.NAME).info("onBlockActivated event");
 			playerIn.openGui(ModCore.instance, GuiHandler.BLOCKBREAKER, worldIn, pos.getX(), pos.getY(), pos.getZ());
 		}
 		return true;
