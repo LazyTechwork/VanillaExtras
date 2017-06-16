@@ -1,0 +1,7 @@
+{
+ 	"parent": "block/cube_top",
+ 	"textures": {
+		"top": "vanillaex:blocks/waterjar_top",
+		"side": "vanillaex:blocks/waterjar"
+ 	}
+}

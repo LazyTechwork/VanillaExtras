@@ -1,0 +1,8 @@
+{
+	"parent": "vanillaex:block/machine",
+	"textures": {
+		"side": "vanillaex:blocks/block_breaker_side_basic",
+		"front": "vanillaex:blocks/block_breaker_basic_front_activated",
+		"alt": "vanillaex:blocks/machine_basic"
+	}
+}

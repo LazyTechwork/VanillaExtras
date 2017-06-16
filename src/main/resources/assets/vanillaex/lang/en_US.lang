@@ -1,0 +1,24 @@
+#Blocks
+tile.waterJar.name=Water Jar
+tile.blockBreaker.basic.name=Block Breaker
+tile.blockBreaker.advanced.name=Advanced Block Breaker
+
+#Items
+item.itemChip.basic.name=Basic Chip
+item.itemChip.advanced.name=Advanced Chip
+
+#Creative Tab
+itemGroup.vanillaextab=Vanilla Extras
+
+#Containers
+container.blockbreaker=Block Breaker
+gui.blockbreaker.enchantedbook.tooltip=Enchanted book goes here
+
+#Config
+gui.config.main_title=Vanilla Extras Configuration
+gui.config.category.blocks=Blocks
+gui.config.category.blocks.tooltip=Blocks settings
+gui.config.blocks.machine_cooldown_basic.name=Basic Breaker Cooldown
+gui.config.blocks.machine_cooldown_basic.comment=The cooldown for the basic tier of breaker
+gui.config.blocks.machine_cooldown_advanced.name=Advanced Breaker Cooldown
+gui.config.blocks.machine_cooldown_advanced.comment=The cooldown for the breaker tier of machine

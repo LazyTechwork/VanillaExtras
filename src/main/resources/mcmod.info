@@ -1,0 +1,16 @@
+[
+{
+  "modid": "vanillaex",
+  "name": "Vanilla Extras",
+  "description": "IvanSteklow's Vanilla Extras Mod",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["IvanSteklow"],
+  "credits": "IvanSteklow for creating =)",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": [mod_MinecraftForge]
+}
+]
