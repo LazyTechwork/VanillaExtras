@@ -1,5 +1,6 @@
 package ivansteklow.vanillaex.container;
 
+import ivansteklow.vanillaex.inventory.slots.SlotItemEnchantedBook;
 import ivansteklow.vanillaex.tileentities.TileEntityBlockBreaker;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
@@ -29,7 +30,7 @@ public class ContainerBlockBreaker extends Container {
 		this.addSlotToContainer(new SlotItemHandler(handler, 6, 62, 53));
 		this.addSlotToContainer(new SlotItemHandler(handler, 7, 80, 53));
 		this.addSlotToContainer(new SlotItemHandler(handler, 8, 98, 53));
-		this.addSlotToContainer(new SlotItemHandler(handler, 9, 134, 17));
+		this.addSlotToContainer(new SlotItemEnchantedBook(handler, 9, 134, 17));
 
 		int xPos = 8;
 		int yPos = 84;

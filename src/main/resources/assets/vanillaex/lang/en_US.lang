@@ -12,6 +12,8 @@ itemGroup.vanillaextab=Vanilla Extras
 
 #Containers
 container.blockbreaker=Block Breaker
+container.blockbreaker_basic=Block Breaker
+container.blockbreaker_advanced=Advanced Block Breaker
 gui.blockbreaker.enchantedbook.tooltip=Enchanted book goes here
 
 #Config

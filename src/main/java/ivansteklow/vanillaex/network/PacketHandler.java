@@ -6,20 +6,21 @@ import net.minecraftforge.fml.relauncher.Side;
 
 public class PacketHandler {
 
-	public static SimpleNetworkWrapper INSTANCE;
+	public static SimpleNetworkWrapper NETWORKINSTANCE = NetworkRegistry.INSTANCE.newSimpleChannel("VanillaEX");
+
 
 	private static int ID = 0;
 
-	private static int nextID() {
+	public static int nextID() {
 		return ID++;
 	}
 
 	public static void registerMessages(String channelName) {
-		INSTANCE = NetworkRegistry.INSTANCE.newSimpleChannel(channelName);
+		NETWORKINSTANCE = NetworkRegistry.INSTANCE.newSimpleChannel(channelName);
 
-		INSTANCE.registerMessage(PacketGetWorker.Handler.class, PacketGetWorker.class, nextID(), Side.SERVER);
+		NETWORKINSTANCE.registerMessage(PacketGetWorker.Handler.class, PacketGetWorker.class, nextID(), Side.SERVER);
 
-		INSTANCE.registerMessage(PacketReturnWorker.Handler.class, PacketReturnWorker.class, nextID(), Side.CLIENT);
+		NETWORKINSTANCE.registerMessage(PacketReturnWorker.Handler.class, PacketReturnWorker.class, nextID(), Side.CLIENT);
 	}
 
 }

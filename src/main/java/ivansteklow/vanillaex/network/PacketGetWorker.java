@@ -86,7 +86,7 @@ public class PacketGetWorker implements IMessage {
 			if (!te.hasCapability(ModCapabilities.CAPABILITY_WORKER, message.side))
 				return;
 			IWork worker = te.getCapability(ModCapabilities.CAPABILITY_WORKER, message.side);
-			PacketHandler.INSTANCE.sendTo(
+			PacketHandler.NETWORKINSTANCE.sendTo(
 					new PacketReturnWorker(worker.getWorkDone(), worker.getMaxWork(), message.className,
 							message.cooldownFieldName, message.maxCooldownFieldName),
 					ctx.getServerHandler().playerEntity);

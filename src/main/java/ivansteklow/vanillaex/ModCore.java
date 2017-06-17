@@ -7,6 +7,9 @@ import ivansteklow.vanillaex.init.CraftTweaker;
 import ivansteklow.vanillaex.init.ModBlocks;
 import ivansteklow.vanillaex.init.ModItems;
 import ivansteklow.vanillaex.init.Refs;
+import ivansteklow.vanillaex.network.PacketGetWorker;
+import ivansteklow.vanillaex.network.PacketHandler;
+import ivansteklow.vanillaex.network.PacketReturnWorker;
 import ivansteklow.vanillaex.proxy.ServerProxy;
 import ivansteklow.vanillaex.tileentities.TileEntityBlockBreaker;
 import net.minecraftforge.fml.common.Mod;
@@ -18,6 +21,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
 
 @Mod(modid = Refs.MOD_ID, name = Refs.NAME, version = Refs.VERSION, acceptedMinecraftVersions = Refs.ACCEPTED_VERSIONS, guiFactory = Refs.GUI_FACTORY, dependencies = Refs.MOD_DEPENDENCIES)
 public class ModCore {
@@ -52,6 +56,8 @@ public class ModCore {
 
 	@EventHandler
 	public void serverStarting(FMLServerStartingEvent event) {
+		PacketHandler.NETWORKINSTANCE.registerMessage(PacketGetWorker.Handler.class, PacketGetWorker.class, PacketHandler.nextID(), Side.SERVER);
+		PacketHandler.NETWORKINSTANCE.registerMessage(PacketReturnWorker.Handler.class, PacketReturnWorker.class, PacketHandler.nextID(), Side.CLIENT);
 		event.registerServerCommand(new MainCmd());
 		event.registerServerCommand(new GamemodeCmd());
 	}

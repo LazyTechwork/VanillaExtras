@@ -25,6 +25,7 @@ public class GuiBlockBreaker extends GuiContainer {
 
 	private TileEntityBlockBreaker te;
 	private IInventory playerInv;
+	private int chiptype;
 
 	public static int cooldown, maxCooldown = 0;
 
@@ -32,7 +33,7 @@ public class GuiBlockBreaker extends GuiContainer {
 
 	private ProgressBar progressBar;
 
-	public GuiBlockBreaker(IInventory playerInv, TileEntityBlockBreaker te) {
+	public GuiBlockBreaker(IInventory playerInv, TileEntityBlockBreaker te, int Chiptype) {
 		super(new ContainerBlockBreaker(playerInv, te));
 
 		this.xSize = 176;
@@ -40,6 +41,8 @@ public class GuiBlockBreaker extends GuiContainer {
 
 		this.te = te;
 		this.playerInv = playerInv;
+
+		this.chiptype = Chiptype;
 
 		this.progressBar = new ProgressBar(TEXTURE, ProgressBarDirection.LEFT_TO_RIGHT, 14, 14, 135, 36, 176, 0);
 	}
@@ -53,7 +56,14 @@ public class GuiBlockBreaker extends GuiContainer {
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-		String s = I18n.format("container.block_breaker");
+		String s;
+		if (chiptype == 0) {
+			s = I18n.format("container.blockbreaker_basic");
+		} else if (chiptype == 1) {
+			s = I18n.format("container.blockbreaker_advanced");
+		} else {
+			s = I18n.format("container.blockbreaker");
+		}
 		this.mc.fontRendererObj.drawString(s, this.xSize / 2 - this.mc.fontRendererObj.getStringWidth(s) / 2, 6,
 				4210752);
 		this.mc.fontRendererObj.drawString(this.playerInv.getDisplayName().getFormattedText(), 8, 72, 4210752);
@@ -73,14 +83,9 @@ public class GuiBlockBreaker extends GuiContainer {
 		sync++;
 		sync %= 10;
 		if (sync == 0)
-			PacketHandler.INSTANCE
-					.sendToServer(
-							new PacketGetWorker(
-									this.te.getPos(),
-									this.mc.player.getAdjustedHorizontalFacing(),
-							"ivansteklow.vanillaex.client.gui.GuiBlockBreaker",
-							"cooldown",
-							"maxCooldown"));
+			PacketHandler.NETWORKINSTANCE
+					.sendToServer(new PacketGetWorker(this.te.getPos(), this.mc.player.getAdjustedHorizontalFacing(),
+							"ivansteklow.vanillaex.client.gui.GuiBlockBreaker", "cooldown", "maxCooldown"));
 
 	}
 
