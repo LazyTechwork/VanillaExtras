@@ -17,6 +17,12 @@ import net.minecraftforge.fml.client.config.GuiConfigEntries;
 import net.minecraftforge.fml.client.config.GuiConfigEntries.CategoryEntry;
 import net.minecraftforge.fml.client.config.IConfigElement;
 
+/**
+ * Gui factory for mod
+ * 
+ * @author IvanSteklow
+ *
+ */
 public class VExGuiFactory implements IModGuiFactory {
 
 	@Override
@@ -47,8 +53,7 @@ public class VExGuiFactory implements IModGuiFactory {
 		private static List<IConfigElement> getConfigElements() {
 			List<IConfigElement> list = new ArrayList<IConfigElement>();
 			list.add(new DummyCategoryElement(I18n.format("gui.config.category.blocks"), "gui.config.category.blocks",
-					CategoryEntryBlocks.class)); // Add another one of these for
-													// any other categories
+					CategoryEntryBlocks.class));
 			return list;
 		}
 

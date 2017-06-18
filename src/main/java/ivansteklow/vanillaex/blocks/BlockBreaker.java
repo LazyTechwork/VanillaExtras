@@ -28,6 +28,13 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 
+/**
+ * Main class of Block Breaker It extends BlockMachine (base class for all
+ * machines with chip types)
+ * 
+ * @author IvanSteklow
+ *
+ */
 public class BlockBreaker extends BlockMachine {
 
 	public static final PropertyDirection FACING = PropertyDirection.create("facing");

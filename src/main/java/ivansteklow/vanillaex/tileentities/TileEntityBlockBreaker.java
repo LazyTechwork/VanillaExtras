@@ -39,6 +39,11 @@ import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 
+/**
+ * Class for block breaker's tile entity
+ * @author IvanSteklow
+ *
+ */
 public class TileEntityBlockBreaker extends TileEntity implements ITickable, ICapabilityProvider {
 
 	private ItemStackHandler handler;

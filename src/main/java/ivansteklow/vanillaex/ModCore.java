@@ -20,6 +20,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
+import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 
@@ -60,6 +61,14 @@ public class ModCore {
 		PacketHandler.NETWORKINSTANCE.registerMessage(PacketReturnWorker.Handler.class, PacketReturnWorker.class, PacketHandler.nextID(), Side.CLIENT);
 		event.registerServerCommand(new MainCmd());
 		event.registerServerCommand(new GamemodeCmd());
+	}
+	
+	@EventHandler
+	public void PlayerLoggedInEvent(PlayerEvent.PlayerLoggedInEvent e) {
+		/*
+		EntityPlayer player = e.player;
+		player.sendMessage((ITextComponent) new TextComponentString("Hello, "+player.getName()+"!").getStyle().setColor(TextFormatting.YELLOW));
+		*/
 	}
 
 }

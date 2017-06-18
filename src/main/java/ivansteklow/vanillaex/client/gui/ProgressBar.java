@@ -5,6 +5,12 @@ import net.minecraft.client.gui.Gui;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.util.ResourceLocation;
 
+/**
+ * Progress bar for machines
+ * 
+ * @author IvanSteklow
+ *
+ */
 public class ProgressBar extends Gui {
 
 	private ResourceLocation texture;
@@ -27,24 +33,54 @@ public class ProgressBar extends Gui {
 		this.textureY = textureY;
 	}
 
+	/**
+	 * Set minimum value
+	 * 
+	 * @param min
+	 *            Minimum value
+	 * @return ProgressBar
+	 */
 	public ProgressBar setMin(int min) {
 		this.min = min;
 		return this;
 	}
 
+	/**
+	 * Set maximum value
+	 * 
+	 * @param max
+	 *            Maximum value
+	 * @return ProgressBar
+	 */
 	public ProgressBar setMax(int max) {
 		this.max = max;
 		return this;
 	}
 
+	/**
+	 * Get Adjusted Width of ProgressBar
+	 * 
+	 * @return width
+	 */
 	private int getAdjustedWidth() {
 		return (int) (min != 0 && max != 0 ? min / max * width : 0);
 	}
 
+	/**
+	 * Get Adjusted Height of ProgressBar
+	 * 
+	 * @return height
+	 */
 	private int getAdjustedHeight() {
 		return (int) (min != 0 && max != 0 ? min / max * height : 0);
 	}
 
+	/**
+	 * Draws Progress bar on screen
+	 * 
+	 * @param mc
+	 *            Minecraft instance
+	 */
 	public void draw(Minecraft mc) {
 		GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
 		mc.getTextureManager().bindTexture(texture);

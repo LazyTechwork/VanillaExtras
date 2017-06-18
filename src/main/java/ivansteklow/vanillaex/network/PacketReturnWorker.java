@@ -3,8 +3,8 @@ package ivansteklow.vanillaex.network;
 import java.lang.reflect.Field;
 
 import io.netty.buffer.ByteBuf;
-import ivansteklow.isdev.Refs;
 import ivansteklow.isdev.utils.Utils;
+import ivansteklow.vanillaex.init.Refs;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.common.network.ByteBufUtils;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
@@ -46,7 +46,7 @@ public class PacketReturnWorker implements IMessage {
 			this.cooldownFieldName = ByteBufUtils.readUTF8String(buf);
 			this.maxCooldownFieldName = ByteBufUtils.readUTF8String(buf);
 		} catch (IndexOutOfBoundsException ioe) {
-			Utils.getLogger(Refs.MOD_NAME).catching(ioe);
+			Utils.getLogger(Refs.NAME).catching(ioe);
 			return;
 		}
 		this.messageValid = true;
@@ -81,7 +81,7 @@ public class PacketReturnWorker implements IMessage {
 				cooldownField.setInt(clazz, message.cooldown);
 				maxCooldownField.setInt(clazz, message.maxCooldown);
 			} catch (Exception e) {
-				Utils.getLogger(Refs.MOD_NAME).catching(e);
+				Utils.getLogger(Refs.NAME).catching(e);
 			}
 		}
 

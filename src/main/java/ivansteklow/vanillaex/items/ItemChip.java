@@ -8,6 +8,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
 
+/**
+ * Class for item chip
+ * @author IvanSteklow
+ *
+ */
 public class ItemChip extends Item {
 
 	public ItemChip() {

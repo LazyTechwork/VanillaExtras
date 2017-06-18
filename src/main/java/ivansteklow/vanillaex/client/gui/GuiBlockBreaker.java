@@ -18,6 +18,11 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.items.CapabilityItemHandler;
 
+/**
+ * Gui class for Block Breaker (Well)
+ * @author IvanSteklow
+ *
+ */
 public class GuiBlockBreaker extends GuiContainer {
 
 	public static final ResourceLocation TEXTURE = new ResourceLocation(Refs.MOD_ID,

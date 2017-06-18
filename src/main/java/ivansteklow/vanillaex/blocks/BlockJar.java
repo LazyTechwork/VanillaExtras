@@ -18,6 +18,12 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
+/**
+ * The main class of water jar <i>(soon be renamed in well)</i>
+ * 
+ * @author IvanSteklow
+ *
+ */
 public class BlockJar extends Block {
 
 	public BlockJar() {
@@ -53,7 +59,7 @@ public class BlockJar extends Block {
 			} else if (item == Items.GLASS_BOTTLE) {
 
 				itemstack.shrink(1);
-				
+
 				ItemStack itemstack1 = PotionUtils.addPotionToItemStack(new ItemStack(Items.POTIONITEM),
 						PotionTypes.WATER);
 

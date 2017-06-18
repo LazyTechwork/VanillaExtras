@@ -1,5 +1,11 @@
 package ivansteklow.vanillaex.capabilities;
 
+/**
+ * Basic interface for mod worker
+ * 
+ * @author IvanSteklow
+ *
+ */
 public interface IWork {
 
 	int getWorkDone();

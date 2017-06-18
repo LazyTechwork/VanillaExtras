@@ -5,6 +5,11 @@ import ivansteklow.vanillaex.handlers.EnumHandler;
 import ivansteklow.vanillaex.items.ItemChip;
 import net.minecraft.item.Item;
 
+/**
+ * Class for registering mod items
+ * @author IvanSteklow
+ *
+ */
 public class ModItems {
 
 	public static Item itemChip;

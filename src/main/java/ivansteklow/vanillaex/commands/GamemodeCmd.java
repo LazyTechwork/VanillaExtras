@@ -9,6 +9,12 @@ import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.GameType;
 import net.minecraft.world.World;
 
+/**
+ * The easy gamemode change command
+ * 
+ * @author IvanSteklow
+ *
+ */
 public class GamemodeCmd extends CommandBase {
 
 	@Override

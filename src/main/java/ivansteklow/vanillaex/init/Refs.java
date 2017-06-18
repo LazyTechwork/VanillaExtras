@@ -3,6 +3,11 @@ package ivansteklow.vanillaex.init;
 import ivansteklow.vanillaex.creativetabs.TabVanillaEx;
 import net.minecraft.creativetab.CreativeTabs;
 
+/**
+ * Mod reference
+ * @author IvanSteklow
+ *
+ */
 public class Refs {
 
 	public static final String MOD_ID = "vanillaex";

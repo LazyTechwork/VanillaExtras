@@ -2,8 +2,20 @@ package ivansteklow.vanillaex.handlers;
 
 import net.minecraft.util.IStringSerializable;
 
+/**
+ * Enum handler for registering chip types
+ * 
+ * @author IvanSteklow
+ *
+ */
 public class EnumHandler {
 
+	/**
+	 * Chip types enum
+	 * 
+	 * @author IvanSteklow
+	 *
+	 */
 	public static enum ChipTypes implements IStringSerializable {
 		BASIC("basic", 0), ADVANCED("advanced", 1);
 

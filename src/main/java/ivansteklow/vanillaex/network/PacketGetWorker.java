@@ -1,10 +1,10 @@
 package ivansteklow.vanillaex.network;
 
 import io.netty.buffer.ByteBuf;
-import ivansteklow.isdev.Refs;
 import ivansteklow.isdev.utils.Utils;
 import ivansteklow.vanillaex.capabilities.IWork;
 import ivansteklow.vanillaex.init.ModCapabilities;
+import ivansteklow.vanillaex.init.Refs;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
@@ -49,7 +49,7 @@ public class PacketGetWorker implements IMessage {
 			this.cooldownFieldName = ByteBufUtils.readUTF8String(buf);
 			this.maxCooldownFieldName = ByteBufUtils.readUTF8String(buf);
 		} catch (IndexOutOfBoundsException ioe) {
-			Utils.getLogger(Refs.MOD_NAME).catching(ioe);
+			Utils.getLogger(Refs.NAME).catching(ioe);
 			return;
 		}
 		this.messageValid = true;

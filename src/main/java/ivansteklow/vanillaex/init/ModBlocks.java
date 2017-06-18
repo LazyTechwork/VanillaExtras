@@ -7,6 +7,11 @@ import ivansteklow.vanillaex.blocks.BlockJar;
 import ivansteklow.vanillaex.handlers.EnumHandler;
 import net.minecraft.block.Block;
 
+/**
+ * Class for registering blocks
+ * @author IvanSteklow
+ *
+ */
 public class ModBlocks {
 
 	public static Block blockJar;

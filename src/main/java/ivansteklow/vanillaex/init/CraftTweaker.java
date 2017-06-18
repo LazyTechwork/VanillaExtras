@@ -5,8 +5,16 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
+/**
+ * Class for registering recipes
+ * @author IvanSteklow
+ *
+ */
 public class CraftTweaker {
 
+	/**
+	 * Register recipes
+	 */
 	public static void register() {
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.OBSIDIAN), Items.WATER_BUCKET, Items.WATER_BUCKET,
 				Items.LAVA_BUCKET);

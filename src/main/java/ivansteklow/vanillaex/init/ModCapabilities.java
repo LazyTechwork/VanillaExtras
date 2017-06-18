@@ -9,6 +9,11 @@ import net.minecraftforge.common.capabilities.Capability.IStorage;
 import net.minecraftforge.common.capabilities.CapabilityInject;
 import net.minecraftforge.common.capabilities.CapabilityManager;
 
+/**
+ * Class for registering mod capabilities
+ * @author IvanSteklow
+ *
+ */
 public class ModCapabilities {
 
 	@CapabilityInject(IWork.class)

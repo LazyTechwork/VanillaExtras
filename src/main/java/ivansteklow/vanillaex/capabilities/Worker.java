@@ -4,6 +4,12 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ITickable;
 import net.minecraftforge.common.util.INBTSerializable;
 
+/**
+ * Mod worker, uses for machine's processing
+ * 
+ * @author IvanSteklow
+ *
+ */
 public class Worker implements IWork, INBTSerializable<NBTTagCompound> {
 
 	private int cooldown;

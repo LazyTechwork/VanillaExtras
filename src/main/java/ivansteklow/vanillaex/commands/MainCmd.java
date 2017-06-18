@@ -8,6 +8,12 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 
+/**
+ * Old command of isHelper
+ * In release will be deleted/renamed
+ * @author IvanSteklow
+ *
+ */
 public class MainCmd extends CommandBase {
 
 	@Override

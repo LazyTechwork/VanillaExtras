@@ -1,6 +1,6 @@
 package ivansteklow.vanillaex.container;
 
-import ivansteklow.vanillaex.inventory.slots.SlotItemEnchantedBook;
+import ivansteklow.isdev.inventory.SlotItemEnchantedBook;
 import ivansteklow.vanillaex.tileentities.TileEntityBlockBreaker;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
@@ -12,11 +12,26 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 
+/**
+ * Container for Block Breaker
+ * 
+ * @author IvanSteklow
+ *
+ */
 public class ContainerBlockBreaker extends Container {
 
 	private TileEntityBlockBreaker te;
 	private IItemHandler handler;
 
+	/**
+	 * Adds slots to Block Breaker: * 9 slots for breaked block * 1 slot for
+	 * enchanted book * Inventory slots
+	 * 
+	 * @param playerInv
+	 *            Player inventory for registering it in Gui
+	 * @param te
+	 *            Tile Entity
+	 */
 	public ContainerBlockBreaker(IInventory playerInv, TileEntityBlockBreaker te) {
 		this.te = te;
 		this.handler = te.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null);

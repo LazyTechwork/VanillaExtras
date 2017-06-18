@@ -22,6 +22,12 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 
+/**
+ * The base class for all machines blocks
+ * 
+ * @author IvanSteklow
+ *
+ */
 public abstract class BlockMachine extends BlockContainer implements IMetaBlockName, ITileEntityProvider {
 
 	public static final PropertyEnum TYPE = PropertyEnum.create("type", ChipTypes.class);

@@ -14,6 +14,12 @@ import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+/**
+ * Vanilla Extras configuration file
+ * 
+ * @author IvanSteklow
+ *
+ */
 public class VExConfig {
 
 	private static Configuration config = null;
@@ -23,16 +29,29 @@ public class VExConfig {
 	public static int machineCooldownBasic;
 	public static int machineCooldownAdvanced;
 
+	/**
+	 * Initialization config in Minecraft Add this method in fml pre
+	 * initialization event
+	 */
 	public static void preInit() {
 		File configFile = new File(Loader.instance().getConfigDir(), "VanillaExConfig.cfg");
 		config = new Configuration(configFile);
 		syncFromFiles();
 	}
 
+	/**
+	 * Returns configuration instance
+	 * 
+	 * @return Configuration
+	 */
 	public static Configuration getConfig() {
 		return config;
 	}
 
+	/**
+	 * Initialization config in Minecraft Add this method on client side pre
+	 * initialization
+	 */
 	public static void clientPreInit() {
 		MinecraftForge.EVENT_BUS.register(new ConfigEventHandler());
 	}
