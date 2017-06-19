@@ -1,0 +1,6 @@
+{
+	"variants":	{
+		"type=basic": { "model": "vanillaex:blockmachinecase_basic" },
+		"type=advanced": { "model": "vanillaex:blockmachinecase_advanced" }
+	}
+}

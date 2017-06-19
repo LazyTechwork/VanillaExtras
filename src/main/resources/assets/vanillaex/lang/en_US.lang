@@ -2,10 +2,14 @@
 tile.waterJar.name=Water Jar
 tile.blockBreaker.basic.name=Block Breaker
 tile.blockBreaker.advanced.name=Advanced Block Breaker
+tile.blockMachineCase.basic.name=Machine Case
+tile.blockMachineCase.advanced.name=Advanced Machine Case
+tile.blockSandbrick.name=Sandbrick
+tile.blockRawSandbrick.name=Raw Sandbrick
 
 #Items
-item.itemChip.basic.name=Basic Chip
-item.itemChip.advanced.name=Advanced Chip
+item.chip.basic.name=Basic Chip
+item.chip.advanced.name=Advanced Chip
 
 #Creative Tab
 itemGroup.vanillaextab=Vanilla Extras
@@ -23,4 +27,4 @@ gui.config.category.blocks.tooltip=Blocks settings
 gui.config.blocks.machine_cooldown_basic.name=Basic Breaker Cooldown
 gui.config.blocks.machine_cooldown_basic.comment=The cooldown for the basic tier of breaker
 gui.config.blocks.machine_cooldown_advanced.name=Advanced Breaker Cooldown
-gui.config.blocks.machine_cooldown_advanced.comment=The cooldown for the breaker tier of machine
+gui.config.blocks.machine_cooldown_advanced.comment=The cooldown for the breaker tier of breaker

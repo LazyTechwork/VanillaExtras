@@ -47,7 +47,7 @@ public class ModCore {
 	public void Init(FMLInitializationEvent e) {
 		proxy.Init(e);
 		proxy.registerModelBakeryVariants();
-		CraftTweaker.register();
+		CraftTweaker.init();
 	}
 
 	@EventHandler
