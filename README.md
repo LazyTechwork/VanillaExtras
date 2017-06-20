@@ -1,7 +1,8 @@
 # VanillaExtras
-**Vanilla Extras Mod** (*the "Mod"*) specializes on adding some extras for Vanilla Minecraft.
 [![](http://cf.way2muchnoise.eu/full_270296_downloads.svg)](https://minecraft.curseforge.com/projects/vanilla-extras-mod)
 [![](http://cf.way2muchnoise.eu/versions/270296.svg)](https://minecraft.curseforge.com/projects/vanilla-extras-mod)
+
+**Vanilla Extras Mod** (*the "Mod"*) specializes on adding some extras for Vanilla Minecraft.
 
 ## Now mod has some blocks and items:
 
