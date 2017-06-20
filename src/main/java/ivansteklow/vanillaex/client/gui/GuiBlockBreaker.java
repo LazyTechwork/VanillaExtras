@@ -1,3 +1,7 @@
+/*
+ * Copyright 2017 (c) IvanSteklow
+ * Licensed under the Apache License, Version 2.0
+ */
 package ivansteklow.vanillaex.client.gui;
 
 import java.util.ArrayList;
@@ -20,6 +24,7 @@ import net.minecraftforge.items.CapabilityItemHandler;
 
 /**
  * Gui class for Block Breaker (Well)
+ * 
  * @author IvanSteklow
  *
  */

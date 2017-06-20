@@ -1,3 +1,7 @@
+/*
+ * Copyright 2017 (c) IvanSteklow
+ * Licensed under the Apache License, Version 2.0
+ */
 package ivansteklow.vanillaex.config;
 
 import java.util.ArrayList;
@@ -39,6 +43,7 @@ public class VExGuiFactory implements IModGuiFactory {
 		return null;
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public RuntimeOptionGuiHandler getHandlerFor(RuntimeOptionCategoryElement element) {
 		return null;

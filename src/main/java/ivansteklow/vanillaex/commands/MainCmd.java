@@ -1,3 +1,7 @@
+/*
+ * Copyright 2017 (c) IvanSteklow
+ * Licensed under the Apache License, Version 2.0
+ */
 package ivansteklow.vanillaex.commands;
 
 import net.minecraft.command.CommandBase;
@@ -9,8 +13,8 @@ import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 
 /**
- * Old command of isHelper
- * In release will be deleted/renamed
+ * Old command of isHelper In release will be deleted/renamed
+ * 
  * @author IvanSteklow
  *
  */

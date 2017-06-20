@@ -1,3 +1,7 @@
+/*
+ * Copyright 2017 (c) IvanSteklow
+ * Licensed under the Apache License, Version 2.0
+ */
 package ivansteklow.vanillaex.handlers;
 
 import ivansteklow.isdev.utils.Utils;
@@ -9,6 +13,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 /**
  * Mod event bus for detecting events
+ * 
  * @author IvanSteklow
  *
  */

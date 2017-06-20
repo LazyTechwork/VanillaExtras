@@ -1,3 +1,7 @@
+/*
+ * Copyright 2017 (c) IvanSteklow
+ * Licensed under the Apache License, Version 2.0
+ */
 package ivansteklow.vanillaex.handlers;
 
 import net.minecraft.util.IStringSerializable;

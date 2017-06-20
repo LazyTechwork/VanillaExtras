@@ -1,3 +1,7 @@
+/*
+ * Copyright 2017 (c) IvanSteklow
+ * Licensed under the Apache License, Version 2.0
+ */
 package ivansteklow.vanillaex;
 
 import ivansteklow.vanillaex.commands.GamemodeCmd;
@@ -24,6 +28,12 @@ import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 
+/**
+ * Main mod class
+ * 
+ * @author IvanSteklow
+ *
+ */
 @Mod(modid = Refs.MOD_ID, name = Refs.NAME, version = Refs.VERSION, acceptedMinecraftVersions = Refs.ACCEPTED_VERSIONS, guiFactory = Refs.GUI_FACTORY, dependencies = Refs.MOD_DEPENDENCIES)
 public class ModCore {
 
@@ -57,18 +67,21 @@ public class ModCore {
 
 	@EventHandler
 	public void serverStarting(FMLServerStartingEvent event) {
-		PacketHandler.NETWORKINSTANCE.registerMessage(PacketGetWorker.Handler.class, PacketGetWorker.class, PacketHandler.nextID(), Side.SERVER);
-		PacketHandler.NETWORKINSTANCE.registerMessage(PacketReturnWorker.Handler.class, PacketReturnWorker.class, PacketHandler.nextID(), Side.CLIENT);
+		PacketHandler.NETWORKINSTANCE.registerMessage(PacketGetWorker.Handler.class, PacketGetWorker.class,
+				PacketHandler.nextID(), Side.SERVER);
+		PacketHandler.NETWORKINSTANCE.registerMessage(PacketReturnWorker.Handler.class, PacketReturnWorker.class,
+				PacketHandler.nextID(), Side.CLIENT);
 		event.registerServerCommand(new MainCmd());
 		event.registerServerCommand(new GamemodeCmd());
 	}
-	
+
 	@EventHandler
 	public void PlayerLoggedInEvent(PlayerEvent.PlayerLoggedInEvent e) {
 		/*
-		EntityPlayer player = e.player;
-		player.sendMessage((ITextComponent) new TextComponentString("Hello, "+player.getName()+"!").getStyle().setColor(TextFormatting.YELLOW));
-		*/
+		 * EntityPlayer player = e.player; player.sendMessage((ITextComponent)
+		 * new TextComponentString("Hello, "+player.getName()+"!").getStyle().
+		 * setColor(TextFormatting.YELLOW));
+		 */
 	}
 
 }

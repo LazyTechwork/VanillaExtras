@@ -1,3 +1,7 @@
+/*
+ * Copyright 2017 (c) IvanSteklow
+ * Licensed under the Apache License, Version 2.0
+ */
 package ivansteklow.vanillaex.init;
 
 import ivansteklow.isdev.bases.ItemBlockBase;
@@ -12,6 +16,7 @@ import net.minecraft.block.Block;
 
 /**
  * Class for registering blocks
+ * 
  * @author IvanSteklow
  *
  */
@@ -37,11 +42,12 @@ public class ModBlocks {
 		BlockHandler.regRender(blockJar, Refs.MOD_ID);
 		BlockHandler.regRender(blockSandbrick, Refs.MOD_ID);
 		BlockHandler.regRender(blockRawSandbrick, Refs.MOD_ID);
-		
+
 		for (int i = 0; i < EnumHandler.ChipTypes.values().length; i++) {
 			BlockHandler.regRender(blockBreaker, Refs.MOD_ID, i,
 					"blockBreaker_" + EnumHandler.ChipTypes.values()[i].getName());
-			BlockHandler.regRender(blockMachineCase, Refs.MOD_ID, i, "blockMachineCase_" + EnumHandler.ChipTypes.values()[i].getName());
+			BlockHandler.regRender(blockMachineCase, Refs.MOD_ID, i,
+					"blockMachineCase_" + EnumHandler.ChipTypes.values()[i].getName());
 		}
 	}
 }

@@ -1,3 +1,7 @@
+/*
+ * Copyright 2017 (c) IvanSteklow
+ * Licensed under the Apache License, Version 2.0
+ */
 package ivansteklow.vanillaex.blocks;
 
 import ivansteklow.isdev.utils.Utils;
@@ -35,6 +39,7 @@ import net.minecraftforge.items.ItemStackHandler;
  * @author IvanSteklow
  *
  */
+@SuppressWarnings("unchecked")
 public class BlockBreaker extends BlockMachine {
 
 	public static final PropertyDirection FACING = PropertyDirection.create("facing");
@@ -131,7 +136,6 @@ public class BlockBreaker extends BlockMachine {
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn,
 			EnumHand hand, EnumFacing heldItem, float side, float hitX, float hitY) {
 		if (!worldIn.isRemote) {
-			Utils.getLogger(Refs.NAME).info("onBlockActivated event");
 			playerIn.openGui(ModCore.instance, GuiHandler.BLOCKBREAKER, worldIn, pos.getX(), pos.getY(), pos.getZ());
 		}
 		return true;

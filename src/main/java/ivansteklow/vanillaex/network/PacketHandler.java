@@ -1,3 +1,7 @@
+/*
+ * Copyright 2017 (c) IvanSteklow
+ * Licensed under the Apache License, Version 2.0
+ */
 package ivansteklow.vanillaex.network;
 
 import net.minecraftforge.fml.common.network.NetworkRegistry;
@@ -7,7 +11,6 @@ import net.minecraftforge.fml.relauncher.Side;
 public class PacketHandler {
 
 	public static SimpleNetworkWrapper NETWORKINSTANCE = NetworkRegistry.INSTANCE.newSimpleChannel("VanillaEX");
-
 
 	private static int ID = 0;
 
@@ -20,7 +23,8 @@ public class PacketHandler {
 
 		NETWORKINSTANCE.registerMessage(PacketGetWorker.Handler.class, PacketGetWorker.class, nextID(), Side.SERVER);
 
-		NETWORKINSTANCE.registerMessage(PacketReturnWorker.Handler.class, PacketReturnWorker.class, nextID(), Side.CLIENT);
+		NETWORKINSTANCE.registerMessage(PacketReturnWorker.Handler.class, PacketReturnWorker.class, nextID(),
+				Side.CLIENT);
 	}
 
 }

@@ -1,3 +1,7 @@
+/*
+ * Copyright 2017 (c) IvanSteklow
+ * Licensed under the Apache License, Version 2.0
+ */
 package ivansteklow.vanillaex.blocks;
 
 import ivansteklow.isdev.interfaces.IMetaBlockName;
@@ -28,8 +32,11 @@ import net.minecraft.world.World;
  * @author IvanSteklow
  *
  */
+
+@SuppressWarnings("unchecked")
 public abstract class BlockMachine extends BlockContainer implements IMetaBlockName, ITileEntityProvider {
 
+	@SuppressWarnings("rawtypes")
 	public static final PropertyEnum TYPE = PropertyEnum.create("type", ChipTypes.class);
 
 	public BlockMachine() {

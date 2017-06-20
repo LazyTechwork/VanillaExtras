@@ -1,3 +1,7 @@
+/*
+ * Copyright 2017 (c) IvanSteklow
+ * Licensed under the Apache License, Version 2.0
+ */
 package ivansteklow.vanillaex.proxy;
 
 import ivansteklow.vanillaex.ModCore;
@@ -37,8 +41,7 @@ public class ClientProxy extends ServerProxy {
 
 	@Override
 	public void registerModelBakeryVariants() {
-		ModelBakery.registerItemVariants(ModItems.itemChip,
-				new ResourceLocation(Refs.MOD_ID, "chip_basic"),
+		ModelBakery.registerItemVariants(ModItems.itemChip, new ResourceLocation(Refs.MOD_ID, "chip_basic"),
 				new ResourceLocation(Refs.MOD_ID, "chip_advanced"));
 		ModelBakery.registerItemVariants(Item.getItemFromBlock(ModBlocks.blockBreaker),
 				new ResourceLocation(Refs.MOD_ID, "blockBreaker_basic"),

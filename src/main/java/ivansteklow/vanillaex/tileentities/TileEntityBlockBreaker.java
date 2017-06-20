@@ -1,3 +1,7 @@
+/*
+ * Copyright 2017 (c) IvanSteklow
+ * Licensed under the Apache License, Version 2.0
+ */
 package ivansteklow.vanillaex.tileentities;
 
 import java.util.ArrayList;
@@ -41,9 +45,11 @@ import net.minecraftforge.items.ItemStackHandler;
 
 /**
  * Class for block breaker's tile entity
+ * 
  * @author IvanSteklow
  *
  */
+@SuppressWarnings("unchecked")
 public class TileEntityBlockBreaker extends TileEntity implements ITickable, ICapabilityProvider {
 
 	private ItemStackHandler handler;
@@ -51,7 +57,7 @@ public class TileEntityBlockBreaker extends TileEntity implements ITickable, ICa
 	private Worker worker;
 
 	public TileEntityBlockBreaker() {
-		this.worker = new Worker(VExConfig.machineCooldownBasic,() -> {
+		this.worker = new Worker(VExConfig.machineCooldownBasic, () -> {
 			if (this.world.isBlockPowered(pos)) {
 				IBlockState currentState = this.world.getBlockState(pos);
 				this.world.setBlockState(pos, currentState.withProperty(BlockBreaker.ACTIVATED, Boolean.valueOf(true)));
@@ -117,6 +123,7 @@ public class TileEntityBlockBreaker extends TileEntity implements ITickable, ICa
 		this.worker.setMaxCooldown(cap);
 	}
 
+	@SuppressWarnings("deprecation")
 	public void breakBlock(EnumFacing facing) {
 		BlockPos newPos = pos.offset(facing, 1);
 		IBlockState state = this.world.getBlockState(newPos);

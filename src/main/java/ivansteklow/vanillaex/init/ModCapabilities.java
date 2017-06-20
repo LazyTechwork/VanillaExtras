@@ -1,3 +1,7 @@
+/*
+ * Copyright 2017 (c) IvanSteklow
+ * Licensed under the Apache License, Version 2.0
+ */
 package ivansteklow.vanillaex.init;
 
 import ivansteklow.vanillaex.capabilities.IWork;
@@ -11,6 +15,7 @@ import net.minecraftforge.common.capabilities.CapabilityManager;
 
 /**
  * Class for registering mod capabilities
+ * 
  * @author IvanSteklow
  *
  */

@@ -10,6 +10,8 @@ tile.blockRawSandbrick.name=Raw Sandbrick
 #Items
 item.chip.basic.name=Basic Chip
 item.chip.advanced.name=Advanced Chip
+item.chipRaw.basic.name=Basic Raw Chip
+item.chipRaw.advanced.name=Advanced Raw Chip
 
 #Creative Tab
 itemGroup.vanillaextab=Vanilla Extras
@@ -27,4 +29,4 @@ gui.config.category.blocks.tooltip=Blocks settings
 gui.config.blocks.machine_cooldown_basic.name=Basic Breaker Cooldown
 gui.config.blocks.machine_cooldown_basic.comment=The cooldown for the basic tier of breaker
 gui.config.blocks.machine_cooldown_advanced.name=Advanced Breaker Cooldown
-gui.config.blocks.machine_cooldown_advanced.comment=The cooldown for the breaker tier of breaker
+gui.config.blocks.machine_cooldown_advanced.comment=The cooldown for the advanced tier of breaker

@@ -1,3 +1,7 @@
+/*
+ * Copyright 2017 (c) IvanSteklow
+ * Licensed under the Apache License, Version 2.0
+ */
 package ivansteklow.vanillaex.network;
 
 import java.lang.reflect.Field;
@@ -73,6 +77,7 @@ public class PacketReturnWorker implements IMessage {
 			return null;
 		}
 
+		@SuppressWarnings("rawtypes")
 		void processMessage(PacketReturnWorker message) {
 			try {
 				Class clazz = Class.forName(message.className);
